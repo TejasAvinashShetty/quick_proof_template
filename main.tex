@@ -6,18 +6,14 @@
 \usepackage{amsmath}
 %\usepackage{hyperref}
 \usepackage[italicdiff]{physics} % italic-diff for derivatives to look natural
-
+\usepackage{natbib}
 \usepackage{braket}
 \usepackage{verbatim} % for comment environment : bug finding
-
-% Referencing macros
-\newcommand{\Eqref}[1]{Equation~\eqref{#1}}
-\newcommand{\Tabref}[1]{Table~\ref{#1}}
-\newcommand{\Figref}[1]{Figure~\ref{#1}}
-\newcommand{\Appref}[1]{Appendix~\ref{#1}}
-
-
-
+\usepackage{dsfont}
+\usepackage{tejas}
+%------
+%\newcommand{}{\ensuremath{}}
+%------
 \title{Quick proof template}
 \author{Tejas Shetty}
 \date{\today}
@@ -25,7 +21,31 @@
 \maketitle
 
 \section{Introduction}
+\section{Special Latex commands used}
+\begin{table}
+    \centering
+    \begin{tabular}{c|c}
+         \tejastable{\kket{2}}{kket{2}} % \tejastable{\}{} % no need of \\
+         \tejastable{2}{3} % automatically goes to next line
+         $\ $  &  \\
+         $\ $  &  \\
+         $\ $  &  \\
+         $\ $  &  \\
+         $\ $  &  \\
+         $\ $&     
+    \end{tabular}
+    \caption{Special Latex commands used 2}
+    \label{tab:special commands2}    
+\end{table}
 \cite{petta}
+$\kket{a} \  \kbra{2}  \  \kketbra{a}{c} \ \kbraket{s}{e} \ \kbraket{\dv{\chi^{k}(t)}{t}}{t} $ $ \ $ $ \tlr{\int_{0}^{T} x^{2}dx } $
+$\braket{2}{3}$
+\begin{align}
+    te &= \gamma + x^{2} \twhere \\
+    \gamma &= 14x^{3} \\
+    \langle \dv{\chi^{k}(t)}{t}\rangle &=\left< \dv{\chi^{k}(t)}{t}\right> \\
+    \tavg{\dv{\chi^{k}(t)}{t}} &= 3
+\end{align}
 %Sets the bibliography style to UNSRT and imports the 
 %bibliography file "samples.bib".
 \bibliographystyle{unsrt}
